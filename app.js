@@ -9,18 +9,18 @@ app.get('/', (req, res) => {
 	res.render('home')
 }) 
 
-app.get('/create_note', (req, res) => {
-	res.render('create_note')
+app.get('/create_posts', (req, res) => {
+	res.render('create_posts')
 }) 
 
-app.get('/notes', (req, res)=> {
+app.get('/posts', (req, res)=> {
 	//const notes = ['first', 'second', 'third']
-	const notes = require('./db')
-	res.render('all_notes', { notes: notes })
+	const posts = require('./db')
+	res.render('all_posts', { posts: posts })
 })
 //mocking the router handling for note detail page
-app.get('/notes/detail', (req, res) => {
-	res.render('note_detail')
+app.get('/posts/detail', (req, res) => {
+	res.render('post_detail')
 })
 
 app.listen(8000, err => {

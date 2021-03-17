@@ -4,17 +4,18 @@ html
     title Blogs
     link(rel='stylesheet' href='/static/main.css')
     link(rel='preconnect' href='https://fonts.gstatic.com')
-    link(href='https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap' rel='stylesheet')
 
   body
     header.header
-      h1 
+      h1
       a(href='/') Blogs
 
       nav.nav
-        a.nav-item(href='/notes') All blogs
+        a.nav-item(href='/posts') All blogs
         a.nav-item(href='/archive') Archive
-  
-  footer
-    h1 “This web application was created to fulfill Web Technology module’s requirements and does not represent an actual company or service”
+
     block content
+    block foot
+      h5.footer “This web application was created to fulfill Web Technology module’s requirements and does not represent an actual company or service”
+    

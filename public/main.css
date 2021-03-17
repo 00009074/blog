@@ -1,0 +1,102 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+	color: #551a8b;
+	text-decoration: none;
+}
+
+a:hover {
+	color: goldenrod;
+}
+
+.header,
+.content,
+.footer {
+	width: 1000px;
+    margin: 0 auto;
+}
+
+.footer {
+    padding-top: 10%;
+}
+.header {
+    font-size: 2rem;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	border-bottom: 1px dotted rgb(177, 177, 177); 
+}
+
+.nav-item {
+	display: inline-block;
+	padding: 7px 55px;
+}
+
+.content {
+	padding: 100px 0 0 0;
+}
+
+.featured {
+	display: inline-block;
+	margin-top: 25px;
+	padding: 10px 20px;
+	background: #FFF;
+	color: tomato;
+	border: 1px solid tomato;
+}
+
+.featured:hover {
+	background: tomato;
+	color: #FFF;
+}
+
+/* CREATE NOTE */
+.page-title {
+	margin-bottom: 35px;
+}
+
+.form {
+	width: 100%;
+}
+.label,
+.input {
+	display: block;
+}
+
+.label {
+	margin-bottom: 5px;
+}
+
+.input {
+	width: 100%;
+	font-size: 1.3rem;
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+}
+
+.btn {
+	font-size: 1.3rem;
+	border: none;
+	background: tomato;
+	color: #fff;
+	padding: 15px 30px;
+}
+
+/*ALL NOTES*/
+.note {
+	display: block;
+	color: #444;
+	border-bottom: 1px solid #ccc;
+	font-size: 1.4rem;
+	padding: 10px;
+}

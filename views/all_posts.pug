@@ -5,7 +5,7 @@ block content
     h1.page-title All Posts
 
       each val in notes
-        a(href =`notes/${val.id}`) #{ val.title}
+        a(href =`posts/${val.id}`) #{ val.title}
 
       if posts.length 
         each post in posts 
