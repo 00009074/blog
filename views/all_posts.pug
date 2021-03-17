@@ -1,0 +1,14 @@
+extends layout.pug 
+
+block content 
+  main.content 
+    h1.page-title All Posts
+
+      each val in notes
+        a(href =`notes/${val.id}`) #{ val.title}
+
+      if posts.length 
+        each post in posts 
+          a.note(href='/posts/detail')= post 
+      else 
+        p There are no posts yet 

@@ -1,0 +1,14 @@
+extends layout.pug
+
+block content
+  main.content
+    h1.page-title Create Post
+
+    form.form(method='POST' action='/create_posts')
+      label.label Title
+      input.input(type='text' name='title')
+
+      label.label Post
+      textarea.input(type='text' name='post' rows='7')
+
+      button.btn(type='submit') Create
