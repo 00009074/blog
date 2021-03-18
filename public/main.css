@@ -6,17 +6,40 @@
 
 :root {
 	font-size: 28px;
-    font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	--text-color: #551a8b;
 }
+
+.navbar {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 10px 20px;
+  
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+  
+	font-family: var(--text-font);
+	border-bottom: 1px solid #eee;
+  }
 
 a {
-	color: #551a8b;
 	text-decoration: none;
 }
-
-a:hover {
-	color: goldenrod;
-}
+.nav-items {
+	display: flex;
+	list-style-type: none;
+  }
+  
+  .nav-link {
+	padding: 5px 10px;
+	color: var(--text-color);
+  }
+  
+  .nav-link:hover,
+  .logo a:hover {
+	color: #cc1c65;
+  }
 
 .header,
 .content,
@@ -50,16 +73,16 @@ a:hover {
 	margin-top: 25px;
 	padding: 10px 20px;
 	background: #FFF;
-	color: tomato;
-	border: 1px solid tomato;
+	color: #551a8b;
+	border: 1px solid #551a8b;
 }
 
 .featured:hover {
-	background: tomato;
+	background: #551a8b;
 	color: #FFF;
 }
 
-/* CREATE NOTE */
+/* CREATE POST */
 .page-title {
 	margin-bottom: 35px;
 }
@@ -87,13 +110,13 @@ a:hover {
 .btn {
 	font-size: 1.3rem;
 	border: none;
-	background: tomato;
+	background: #551a8b;
 	color: #fff;
 	padding: 15px 30px;
 }
 
-/*ALL NOTES*/
-.note {
+/*ALL POSTS*/
+.post {
 	display: block;
 	color: #444;
 	border-bottom: 1px solid #ccc;

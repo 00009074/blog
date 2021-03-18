@@ -7,15 +7,10 @@ html
     link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap' rel='stylesheet')
 
   body
-    header.header
-      h1
-      a(href='/') Blogs
-
-      nav.nav
-        a.nav-item(href='/posts') All blogs
-        a.nav-item(href='/archive') Archive
+    include includes/navbar
 
     block content
+    script(src='https://cdn.jsdelivr.net/npm/marked/marked.min.js')
     block foot
       h5.footer “This web application was created to fulfill Web Technology module’s requirements and does not represent an actual company or service”
     

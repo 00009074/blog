@@ -1,14 +1,12 @@
 extends layout.pug 
 
 block content 
-  main.content 
-    h1.page-title All Posts
-
-      each val in notes
-        a(href =`posts/${val.id}`) #{ val.title}
-
-      if posts.length 
-        each post in posts 
-          a.note(href='/posts/detail')= post 
-      else 
-        p There are no posts yet 
+  main.all_posts     
+    if posts.length
+      ul.posts
+        each post in posts
+          li.post_item 
+            a(href=`posts/${ post.id }`)= post.title
+            a.delete_post(href=`posts/${ post.id }/delete`) Delete
+    else
+      p.empty No any post yet

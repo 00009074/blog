@@ -1,14 +1,19 @@
 extends layout.pug
 
 block content
-  main.content
-    h1.page-title Create Post
+  main.create_posts
+    h2.page-title Create Post
 
-    form.form(method='POST' action='/create_posts')
+    if success
+      p.success Post was added successfully
+
+    if error
+      p.error Please add post (title & body) before submitting
+
+    form(method="POST")
       label.label Title
-      input.input(type='text' name='title')
-
-      label.label Post
-      textarea.input(type='text' name='post' rows='7')
-
-      button.btn(type='submit') Create
+      input(class="post-input" name="title")
+      
+      label.label Body
+      textarea(class="post-input" name="body" rows="10")
+      button.create-note-btn Create post
