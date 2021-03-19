@@ -6,7 +6,7 @@ const router = express.Router();
 const DbService = require("../services/db");
 const root = require("../utils").root;
 
-router.post("/submit-posts", function(req, res) {
+router.post("/submit_posts", function(req, res) {
   
   
   

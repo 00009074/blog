@@ -20,20 +20,27 @@ router.get("/", (req, res) => {
   )
 })
 
-router.get("/create_posts", (req, res) => {
-  res.render("create_posts", {})
+router.get("/create-post", (req, res) => {
+  res.render("create_post", {})
 });
 
-router.post("/create_posts", (req, res) => {
+router.post("/create-post", (req, res) => {
   if (v.isValid(req.body)) {
-    dbc.saveOne(req.body, () => res.render("create_posts", { success: true }))
+    dbc.saveOne(req.body, () => res.render("create_post", { success: true }))
   } else {
-    res.render("create_posts", { error: true, success: false })
+    res.render("create_post", { error: true, success: false })
   }
 })
 
 router.get('/:id/delete', (req, res) => {
   dbc.deleteOne(
+    req.params.id, 
+    () => res.redirect('/')),
+    () => res.sendStatus(500)
+})
+
+router.get('/:id/update', (req, res) => {
+  dbc.updateOne(
     req.params.id, 
     () => res.redirect('/')),
     () => res.sendStatus(500)
@@ -53,7 +60,7 @@ router.get("/:id/archive", (req, res) => {
     fs.writeFile(getCollection('blogs.json'), JSON.stringify(posts), err => {
       if (err) res.sendStatus(500)
 
-      res.redirect('/posts')
+      res.redirect('/blogs')
     })
     
   })

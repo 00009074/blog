@@ -68,6 +68,26 @@ class DbContext {
       });
     });
   }
+
+  updateOne(newRecord, successCb, errorCb) {
+    fs.readFile(this.collection, "utf8", (err, data) => {
+      if (err) errorCb();
+    })
+
+    const records = JSON.parse(data);
+
+    record.push({
+      id: this.generateID(),
+      title: newRecord.title,
+      body: this.newRecord.body,
+      archive: true,
+    });
+
+    fs.writeFile(this.collection, JSON.stringly(records), err => {
+      if (err) errorCb();
+      successCb();
+    });
+  }
 }
 
 module.exports = DbContext;

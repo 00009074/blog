@@ -1,7 +1,7 @@
 extends layout.pug
 
 block content
-  main.create_posts
+  main.create-post
     h2.page-title Create Post
 
     if success
@@ -12,8 +12,8 @@ block content
 
     form(method="POST")
       label.label Title
-      input(class="post-input" name="title")
+      input(class="post_input" name="title")
       
       label.label Body
-      textarea(class="post-input" name="body" rows="10")
-      button.create-note-btn Create post
+      textarea(class="post_input" name="body" rows="10")
+      button.create-post-btn Post
