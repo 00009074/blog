@@ -115,15 +115,8 @@ a {
 }
 
 /*ALL POSTS*/
-.post {
-	display: block;
-	color: #444;
-	border-bottom: 1px solid #ccc;
-	font-size: 1.4rem;
-	padding: 10px;
-}
 
-.all_posts {
+.all-posts {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 20px;
@@ -133,6 +126,11 @@ a {
 	list-style: none;
 	font-family: var(--text-font);
 	max-width: 600px;
+	display: block;
+	color: #444;
+	border-bottom: 1px solid #ccc;
+	font-size: 1.4rem;
+	padding: 10px;
   }
   
   .posts > li {
@@ -141,22 +139,18 @@ a {
 	border-bottom: 1px solid #ccc;
   }
   
-  .posts > li:hover {
-	background: #f8f8f8;
-  }
-  
-  /* note detail page */
-  .post_title,
-  .post_body {
+  /* post detail page */
+  .post-title,
+  .post-body {
 	font-family: var(--text-font);
   }
   
-  .post_title {
+  .post-title {
 	font-size: 3rem;
 	margin-bottom: 1.5rem; 
   }
   
-  .post_body {
+  .post-body {
 	font-size: 1.5rem;
   }
   
@@ -181,7 +175,7 @@ a {
 	color: #0e661a;
   }
   
-  .form-title {
+  .page-title {
 	font-weight: 300;
 	margin-bottom: 20px;
   }
@@ -196,22 +190,21 @@ a {
 	font-size: 1.5rem;
   }
   
-  .post_item {
+  .post-item {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
   }
   
-  .delete_post,
-  .update_post {
+  .delete-post,
+  .update-post {
 	font-size: 0.8rem;
-	background: #fff;
 	color: #551a8b;
 	padding: 2px 2px;
 	margin: 1%;
   }
-  .delete_post:hover,
-  .update_post:hover {
+  .delete-post:hover,
+  .update-post:hover {
 	background: #551a8b;
 	color: #fff;
   }

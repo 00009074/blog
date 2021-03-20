@@ -69,24 +69,20 @@ class DbContext {
     });
   }
 
-  updateOne(newRecord, successCb, errorCb) {
-    fs.readFile(this.collection, "utf8", (err, data) => {
+  updateOne(id, successCb, errorCb) {
+    fs.readFile(getCollection('blogs.json'), "utf8", (err, data) => {
       if (err) errorCb();
-    })
 
-    const records = JSON.parse(data);
+      const records = JSON.parse(data);
 
-    record.push({
-      id: this.generateID(),
-      title: newRecord.title,
-      body: this.newRecord.body,
-      archive: true,
-    });
+      const filtered = records.filter(record => record.id != id) || [];
 
-    fs.writeFile(this.collection, JSON.stringly(records), err => {
+    fs.appendFile(getCollection('blogs.json'), JSON.stringly(filtered), err => {
       if (err) errorCb();
       successCb();
-    });
+      console.log('Updated!');
+     });
+   });
   }
 }
 

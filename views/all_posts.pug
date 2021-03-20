@@ -1,13 +1,13 @@
 extends layout.pug 
 
 block content 
-  main.all_posts     
+  main.all-posts     
     if posts.length
       ul.posts
         each post in posts
-          li.post_item 
+          li.post-item 
             a(href=`posts/${ post.id }`)= post.title
-            a.update_post(href=`posts/${ post.id }/update`) Update
-            a.delete_post(href=`posts/${ post.id }/delete`) Delete
+            a.update-post(href=`posts/${ post.id }/update`) Update
+            a.delete-post(href=`posts/${ post.id }/delete`) Delete
     else
       p.empty No any post yet

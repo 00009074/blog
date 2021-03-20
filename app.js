@@ -1,25 +1,25 @@
 const path = require("path");
 const fs = require('fs');
 
-const express = require('express');
+const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 
 //routes
-const blogs = require("./routes/blogs");
 const posts = require("./routes/posts");
+const comments = require("./routes/comments");
 const getCollection = require("./utils").getCollection;
-
-//template
-app.set('view engine', 'pug')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-app.use("/blogs", blogs);
+//template
+app.set('view engine', 'pug')
+
 app.use("/posts", posts);
+app.use("/comments", comments);
 
 app.get('/', (req, res) => {
 	res.render('home')

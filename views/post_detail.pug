@@ -1,11 +1,11 @@
 extends layout.pug
 
 block content
-  main.all_posts  
-    h2.post_title= post.title
+  main.all-posts  
+    h2.post-title= post.title
       if !post.archive
         a.archive-link(href=`/posts/${ post.id }/archive`) Archive post
-    p.post_body#body= post.body 
+    p.post-body#body= post.body 
     
     
     script(type="text/javascript").
