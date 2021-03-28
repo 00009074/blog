@@ -7,7 +7,6 @@ block content
         each post in posts
           li.post-item 
             a(href=`posts/${ post.id }`)= post.title
-            a.update-post(href=`posts/${ post.id }/update`) Update
             a.delete-post(href=`posts/${ post.id }/delete`) Delete
     else
       p.empty No any post yet

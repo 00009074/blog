@@ -33,24 +33,8 @@ router.post("/create-post", (req, res) => {
 })
 
 router.get('/:id/delete', (req, res) => {
-  dbc.deleteOne((post) => {
-    if (post.post === req.params.id) {
-      return req.body;
-    } else {
-      return post;
-    }
-  });
-  save();
-
-  res.json({
-    status: "success",
-    stateInfo: req.body,
-  });
-});  
-
-router.put('/:id/update', bodyParses.json(), (req, res) => {  
-  
-  dbc.updateOne(req.params.id, 
+  dbc.deleteOne(
+    req.params.id, 
     () => res.redirect('/')),
     () => res.sendStatus(500)
 })

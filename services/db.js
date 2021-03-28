@@ -68,22 +68,6 @@ class DbContext {
       });
     });
   }
-
-  updateOne(id, successCb, errorCb) {
-    fs.readFile(getCollection('blogs.json'), "utf8", (err, data) => {
-      if (err) errorCb();
-
-      const records = JSON.parse(data);
-
-      const filtered = records.filter(record => record.id != id) || [];
-
-    fs.appendFile(getCollection('blogs.json'), JSON.stringly(filtered), err => {
-      if (err) errorCb();
-      successCb();
-      console.log('Updated!');
-     });
-   });
-  }
 }
 
 module.exports = DbContext;

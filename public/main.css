@@ -196,15 +196,13 @@ a {
 	align-items: center;
   }
   
-  .delete-post,
-  .update-post {
+  .delete-post {
 	font-size: 0.8rem;
 	color: #551a8b;
 	padding: 2px 2px;
 	margin: 1%;
   }
-  .delete-post:hover,
-  .update-post:hover {
+  .delete-post:hover {
 	background: #551a8b;
 	color: #fff;
   }
