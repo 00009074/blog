@@ -25,4 +25,4 @@ node app
  - body-parser.js
 
  ### Web application repository on github
- [link to github repo]
+ [link to github repo](https://github.com/00009074/blog.git)

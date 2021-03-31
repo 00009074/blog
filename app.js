@@ -25,6 +25,16 @@ app.get('/', (req, res) => {
 	res.render('home')
 }) 
 
+app.get('/api/v1/posts', (req, res) => {
+	fs.readFile('./database/blogs.json', (err, data) => {
+	  if (err) throw err
+  
+	  const posts = JSON.parse(data)
+  
+	  res.json(posts)
+	})
+  })
+
 app.get("/archive", (req, res) => {
 	fs.readFile(getCollection('blogs.json'), (err, data) => {
 		if (err) res.sendStatus(500)
